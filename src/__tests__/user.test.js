@@ -15,7 +15,7 @@ describe('App', () => {
     expect(await screen.findByText(/Signed in as/)).toBeInTheDocument();
   });
 
-  test('renders fireEvent component  with wait', async () => {
+  test('renders FIRE EVENT', async () => {
     render(<User />);
 
     // wait for the user to resolve
@@ -32,7 +32,7 @@ describe('App', () => {
   });
 
 
-  test('renders User wait event', async () => {
+  test('renders User User Event', async () => {
     render(<User />);
 
     // wait for the user to resolve
