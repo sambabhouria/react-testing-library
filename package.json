@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
+    "@testing-library/react-hooks": "^6.0.0",
     "@testing-library/user-event": "^12.1.10",
     "axios": "^0.21.1",
     "babel-core": "^6.26.3",
@@ -56,6 +57,8 @@
     ]
   },
   "jest": {
-    "setupFilesAfterEnv": ["./other/setup-tests"]
+    "setupFilesAfterEnv": [
+      "./other/setup-tests"
+    ]
   }
 }
