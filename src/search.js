@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Search({ value, onChange, children }) {
+export function Search({ value, onChange, children }) {
     return (
       <div>
         <label htmlFor="search">{children}</label>
@@ -16,17 +16,17 @@ function Search({ value, onChange, children }) {
 
 function SearchComponent() {
   const [search, setSearch] = React.useState('');
- 
+
   function handleChange(event) {
     setSearch(event.target.value);
   }
- 
+
   return (
     <div>
       <Search value={search} onChange={handleChange}>
         Search:
       </Search>
- 
+
       <p>Searches for {search ? search : '...'}</p>
     </div>
   );

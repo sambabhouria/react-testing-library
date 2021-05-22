@@ -13,6 +13,9 @@ This is an example project of how to test react components using react-testing-l
 The @testing-library family of packages helps you test UI components in a user-centric way.
 
 DOM Testing Library works with any environment that provides DOM APIs, such as Jest, Mocha + JSDOM, or a real browser
+
+# Helpful Link
+https://www.robinwieruch.de/react-testing-library
 #  Installation
 
 npm install --save-dev @testing-library/react
