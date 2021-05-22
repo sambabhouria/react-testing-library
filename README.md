@@ -16,6 +16,8 @@ DOM Testing Library works with any environment that provides DOM APIs, such as J
 
 # Helpful Link
 https://www.robinwieruch.de/react-testing-library
+
+https://kentcdodds.com/blog/fix-the-not-wrapped-in-act-warning
 #  Installation
 
 npm install --save-dev @testing-library/react

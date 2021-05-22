@@ -9,27 +9,27 @@ import Asynchronous from '../asynchronous';
 jest.mock('axios');
  
 describe('App', () => {
-  test('fetches stories from an API and displays them', async () => {
-    const stories = [
-      { objectID: '1', title: 'Hello' },
-      { objectID: '2', title: 'React' },
-    ];
+  // test('fetches stories from an API and displays them', async () => {
+  //   const stories = [
+  //     { objectID: '1', title: 'Hello' },
+  //     { objectID: '2', title: 'React' },
+  //   ];
 
-   axios.get.mockImplementationOnce(() =>
-      Promise.resolve({ data: { hits: stories } })
-    );
-    render(<Asynchronous />);
+  //  axios.get.mockImplementationOnce(() =>
+  //     Promise.resolve({ data: { hits: stories } })
+  //   );
+  //   render(<Asynchronous />);
 
-    await userEvent.click(screen.getByRole('button'));
+  //   await userEvent.click(screen.getByRole('button'));
 
 
-  //   await act(() =>  axios.get.mockImplementationOnce(() =>
-  //   Promise.resolve({ data: { hits: stories } })
-  // ));
+  // //   await act(() =>  axios.get.mockImplementationOnce(() =>
+  // //   Promise.resolve({ data: { hits: stories } })
+  // // ));
 
-    const items = await screen.findAllByRole('listitem');
-    expect(items).toHaveLength(2);
-  });
+  //   const items = await screen.findAllByRole('listitem');
+  //   expect(items).toHaveLength(2);
+  // });
 
   test('fetches stories from an API and displays them with act', async () => {
     const stories = [
@@ -45,7 +45,8 @@ describe('App', () => {
 
     await userEvent.click(screen.getByRole('button'));
 
-    await act(() => promise);
+     await act(() => promise);
+    // await act( async () => promise);
 
     expect(screen.getAllByRole('listitem')).toHaveLength(2);
   });
