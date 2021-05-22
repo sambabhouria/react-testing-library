@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function Search({ value, onChange, children }) {
     return (
       <div>
