@@ -3,7 +3,7 @@ import axios from 'axios';
 //  import { render, screen } from '@testing-library/react';
 import { render, screen, act } from '@testing-library/react'; // to use act
 import userEvent from '@testing-library/user-event';
- 
+
 import Asynchronous from '../asynchronous';
  
 jest.mock('axios');
