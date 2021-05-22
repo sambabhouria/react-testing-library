@@ -9,7 +9,7 @@ light utility functions on top of react-dom and react-dom/test-utils, in a way t
 
 # # The more your tests resemble the way your software is used, the more confidence they can give you.
 
-
+This is an example project of how to test react components using react-testing-library and Jest.
 #  Installation
 
 npm install --save-dev @testing-library/react
