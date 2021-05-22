@@ -1,5 +1,7 @@
 import React from 'react';
 import { render, screen , fireEvent} from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+
 import User from '../user';
 
 describe('App', () => {
@@ -27,6 +29,22 @@ describe('App', () => {
     });
 
     expect(screen.getByText(/Searches for JavaScript/)).toBeInTheDocument();
+  });
+
+
+  test('renders User wait event', async () => {
+    render(<User />);
+
+    // wait for the user to resolve
+    await screen.findByText(/Signed in as/);
+
+    expect(screen.queryByText(/Searches for JavaScript/)).toBeNull();
+
+    await userEvent.type(screen.getByRole('textbox'), 'JavaScript');
+
+    expect(
+      screen.getByText(/Searches for JavaScript/)
+    ).toBeInTheDocument();
   });
 
 
