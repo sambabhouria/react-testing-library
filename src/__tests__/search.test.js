@@ -31,5 +31,7 @@ describe('SearchComponent', () => {
     // succeeds
     expect(screen.getByText('Search:')).toBeInTheDocument();
 
+    expect(screen.queryByText(/Searches for JavaScript/)).toBeNull();
+
   });
 });
